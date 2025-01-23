@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 import os
-from dotenv import load_dotenv
+
 from pathlib import Path
+
+from dotenv import load_dotenv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -45,7 +47,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "catalog",  # Добавлено приложение catalog
     "blog",  # Добавлено приложение blog
+    'users' # Добавлено приложение users
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
